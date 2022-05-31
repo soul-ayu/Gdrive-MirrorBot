@@ -45,7 +45,7 @@ def stats(update, context):
             f'<b>├  🎮 Rᴀᴍ : {memory}%</b>\n' \
             f'<b>├  💽 Dɪsᴋ : {disk}%</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──《 ☣️ @SparkXcloud ☣️ 》</b>'
+            f'<b>╰──《 ☣️ @SOUL_AYU ☣️ 》</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -55,8 +55,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot")
-    buttons.buildbutton("Channel", "https://t.me/SparkXcloud")
+    buttons.buildbutton("Repo", "https://github.com/soul-ayu/Gdrive-MirrorBot")
+    buttons.buildbutton("Channel", "https://t.me/AyushProjectzzz")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         if update.message.chat.type == "private" :
@@ -65,7 +65,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else :
             sendMarkup(start_string, context.bot, update, reply_markup)
     else :
-        sendMarkup(f"Oops! not an Authorized user.\nPlease deploy your own <b>SparkXcloud-Gdrive-MirrorBot</b>.", context.bot, update, reply_markup)
+        sendMarkup(f"Oops! not an Authorized user.\nPlease deploy your own <b>Gdrive-MirrorBot</b>.", context.bot, update, reply_markup)
 
 
 def restart(update, context):
